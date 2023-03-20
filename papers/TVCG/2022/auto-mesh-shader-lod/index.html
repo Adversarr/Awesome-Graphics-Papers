@@ -5,15 +5,15 @@
   
   <title>Awesome Graphics Papers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基本信息：  简介：本篇文章对原始的NeRF结构进行改进，改善NeRF处理glossy现象的问题。 相关材料： 源码：https:&#x2F;&#x2F;github.com&#x2F;google-research&#x2F;multinerf 视频：https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v&#x3D;qrdRH9irAlk&amp;ab_channel&#x3D;DorVerbin 讨论班: 2022-12-18    NeRF在">
+  <meta name="description" content="基本信息：  简介：本篇文章给出了在自适应划分的距离组下同时优化网格和 Shader 的 LOD 的优化算法。 相关材料： 源码：无 视频：无 讨论班: 2023-02-26    文章中首先提出了被称为“交替优化”的优化算法，其中首先对 Shader 利用遗传算法进行变异，得到若干变体，再利用网格简化算法来以 image loss 进行网格简化，使得在给定距离上每个变体对应的运算代价小于给定开销">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Awesome Graphics Papers">
-<meta property="og:url" content="https://gcl-seminar.github.io/Awesome-Graphics-Papers/papers/CVPR/2022/RefNeRF/index.html">
+<meta property="og:url" content="https://gcl-seminar.github.io/Awesome-Graphics-Papers/papers/TVCG/2022/auto-mesh-shader-lod/index.html">
 <meta property="og:site_name" content="Awesome Graphics Papers">
-<meta property="og:description" content="基本信息：  简介：本篇文章对原始的NeRF结构进行改进，改善NeRF处理glossy现象的问题。 相关材料： 源码：https:&#x2F;&#x2F;github.com&#x2F;google-research&#x2F;multinerf 视频：https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v&#x3D;qrdRH9irAlk&amp;ab_channel&#x3D;DorVerbin 讨论班: 2022-12-18    NeRF在">
+<meta property="og:description" content="基本信息：  简介：本篇文章给出了在自适应划分的距离组下同时优化网格和 Shader 的 LOD 的优化算法。 相关材料： 源码：无 视频：无 讨论班: 2023-02-26    文章中首先提出了被称为“交替优化”的优化算法，其中首先对 Shader 利用遗传算法进行变异，得到若干变体，再利用网格简化算法来以 image loss 进行网格简化，使得在给定距离上每个变体对应的运算代价小于给定开销">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-12-18T00:00:00.000Z">
-<meta property="article:modified_time" content="2022-12-18T00:00:00.000Z">
+<meta property="article:published_time" content="2023-02-26T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-02-26T00:00:00.000Z">
 <meta property="article:author" content="GCL-Seminar">
 <meta name="twitter:card" content="summary">
   
@@ -59,14 +59,14 @@
 </header>
 
     <br>
-    <section id="main" class="outer"><article id="paper-reading-papers/CVPR/2022/RefNeRF" class="article article-type-paper-reading" itemscope itemprop="blogPost">
+    <section id="main" class="outer"><article id="paper-reading-papers/TVCG/2022/auto-mesh-shader-lod" class="article article-type-paper-reading" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
       <header class="article-header">
         
   <h1 itemprop="name">
-    <a href="/Awesome-Graphics-Papers/papers/CVPR/2022/RefNeRF/" class="article-title" target="_blank" itemprop="url">Ref-NeRF: Structured View-Dependent Appearance for Neural Radiance Fields</a>
+    <a href="/Awesome-Graphics-Papers/papers/TVCG/2022/auto-mesh-shader-lod/" class="article-title" target="_blank" itemprop="url">Automatic Mesh and Shader Level of Detail</a>
   </h1>
 
 
@@ -75,8 +75,8 @@
       </header>
     
     <div class="article-meta">
-      <!--<a href="/Awesome-Graphics-Papers/papers/CVPR/2022/RefNeRF/" class="article-date">
-  <time datetime="2022-12-18T00:00:00.000Z" itemprop="datePublished">2022-12-18</time>
+      <!--<a href="/Awesome-Graphics-Papers/papers/TVCG/2022/auto-mesh-shader-lod/" class="article-date">
+  <time datetime="2023-02-26T00:00:00.000Z" itemprop="datePublished">2023-02-26</time>
 </a>-->
       <!-- 
 --><!-- by blair 160724 -->
@@ -87,13 +87,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-          <p>论文标题：Ref-NeRF: Structured View-Dependent Appearance for Neural Radiance Fields</p>
-          <p>论文来源：CVPR 2022
+          <p>论文标题：Automatic Mesh and Shader Level of Detail</p>
+          <p>论文来源：TVCG 2022
           </p>
-          <p>论文作者：Dor Verbin, Peter Hedman, Ben Mildenhall, Todd Zickler, Jonathan T. Barron, Pratul P. Srinivasan</p>
+          <p>论文作者：Yuzhi Liang, Qi Song, Rui Wang, Yuchi Huo, Hujun Bao</p>
           
-          <p>论文标签：<a href="/Awesome-Graphics-Papers/hierarchies.html#NeRF">NeRF</a></p>
-          <p><a target="_blank" rel="noopener" href='https://arxiv.org/abs/2112.03907'>论文 / 项目链接</a></p>
+          <p>论文标签：<a href="/Awesome-Graphics-Papers/hierarchies.html#Rasterization pipeline optimization">Rasterization pipeline optimization</a></p>
+          <p><a target="_blank" rel="noopener" href='https://ieeexplore.ieee.org/document/9815871'>论文 / 项目链接</a></p>
 
         </blockquote>
       
@@ -101,15 +101,17 @@
       
         <p>基本信息：</p>
 <ul>
-<li>简介：本篇文章对原始的NeRF结构进行改进，改善NeRF处理glossy现象的问题。</li>
+<li>简介：本篇文章给出了在自适应划分的距离组下同时优化网格和 Shader 的 LOD 的优化算法。</li>
 <li>相关材料：<ul>
-<li>源码：<a target="_blank" rel="noopener" href="https://github.com/google-research/multinerf">https://github.com/google-research/multinerf</a></li>
-<li>视频：<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=qrdRH9irAlk&amp;ab_channel=DorVerbin">https://www.youtube.com/watch?v=qrdRH9irAlk&amp;ab_channel=DorVerbin</a></li>
-<li>讨论班: 2022-12-18</li>
+<li>源码：无</li>
+<li>视频：无</li>
+<li>讨论班: 2023-02-26</li>
 </ul>
 </li>
 </ul>
-<p>NeRF在glossy情况下，由于每点的出射光差异很大，因此使用NeRF直接根据出射方向推断出射光是较为困难的，而在Phong模型、无限远环境光的条件下，每点的入射光是一致的。作者将反射方向、roughness、法线方向等显式地作为网络的输入，简化了模型推理的难度；此外，加入了对normal的惩罚，使得density场更加准确。在合成场景下表现很好，但是现实场景下由于不满足无穷远环境光的假设，改善效果不是很好。</p>
+<p>文章中首先提出了被称为“交替优化”的优化算法，其中首先对 Shader 利用遗传算法进行变异，得到若干变体，再利用网格简化算法来以 image loss 进行网格简化，使得在给定距离上每个变体对应的运算代价小于给定开销，且误差上满足要求。之后，这些变体会进行排序，前 N% 的变体进入下一轮交替优化，反复多轮后得到结果。</p>
+<p>针对交替优化耗时较长的问题，文章中还提出了“分别优化”的算法。该算法会首先分别对网格和 Shader 独立的进行简化，得到一系列质量单调下降的 Shader 和网格变体列，然后再针对每个距离组选择合适的网格和 Shader 对。为了让 LOD 组间的变化尽可能平滑，文章还设置了最平滑的 LOD 切换路线的查找，以及 LOD 组数量的优化操作。</p>
+<p>自己写的博客：<a target="_blank" rel="noopener" href="https://blog.libreliu.info/paper-reading/auto-shader-mesh-lod/">https://blog.libreliu.info/paper-reading/auto-shader-mesh-lod/</a></p>
 
       
      <!-- by blair add this if sentence at 20160725 -->
@@ -168,7 +170,7 @@
     
 <nav id="article-nav">
   
-    <a href="/Awesome-Graphics-Papers/papers/PACMCGIT/data-driven-prt/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/Awesome-Graphics-Papers/papers/SIGGRAPH-Asia/2022/DASRAD/" id="article-nav-newer" class="article-nav-link-wrap">
       <div class="article-nav-title"><span>&lt;</span>&nbsp;
         
           (no title)
@@ -177,7 +179,7 @@
     </a>
   
   
-    <a href="/Awesome-Graphics-Papers/papers/SIGGRAPH/2019/puppetmaster_SIG2019/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/Awesome-Graphics-Papers/papers/SIGGRAPH-Asia/2022/IsoTLC_IsoSEA/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">&nbsp;<span>&gt;</span></div>
     </a>
   

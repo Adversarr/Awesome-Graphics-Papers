@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Awesome Graphics Papers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Awesome Graphics Papers">
+<meta property="og:url" content="https://gcl-seminar.github.io/Awesome-Graphics-Papers/page/3/index.html">
+<meta property="og:site_name" content="Awesome Graphics Papers">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="GCL-Seminar">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" href="/css/images/logo.png">
+  
+  <link href="/Awesome-Graphics-Papers/Awesome-Graphics-Papers/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+  <link href="/Awesome-Graphics-Papers/Awesome-Graphics-Papers/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+  
+<link rel="stylesheet" href="/Awesome-Graphics-Papers/css/style.css">
+
+  
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+      <a id="logo" class="logo" href="/Awesome-Graphics-Papers/"></a>
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/Awesome-Graphics-Papers/">主页</a>
+        
+          <a class="main-nav-link" href="/Awesome-Graphics-Papers/archives">归档</a>
+        
+          <a class="main-nav-link" href="/Awesome-Graphics-Papers/hierarchies">层次结构</a>
+        
+          <a class="main-nav-link" href="/Awesome-Graphics-Papers/paper-sources">论文列表</a>
+        
+          <a class="main-nav-link" href="/Awesome-Graphics-Papers/about">关于</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://gcl-seminar.github.io/Awesome-Graphics-Papers"></form>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+    <br>
+    <section id="main" class="outer">
+    <div class="article-entry" itemprop="articleBody">
+      <blockquote>
+        <p>本页面为主页，论文阅读小结的所有更新会在本页面展示，更新按 Front-matter 的 date 字段为顺序进行展示。</p>
+      </blockquote>
+    </div>
+    <hr>
+    
+      <article id="paper-reading-papers/EG/sph_tutorial" class="article article-type-paper-reading" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <myh11 itemprop="name">
+      
+        <a class="article-title-index" href="/Awesome-Graphics-Papers/papers/EG/sph_tutorial/"><strong>Smoothed Particle Hydrodynamics Techniques for the Physics Based Simulation of Fluids and Solids</strong></a>
+      
+      <!--<a>
+      <div = post.date  </div>
+      </a>-->
+      <br> <!-- blair add -->
+    </myh11>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <!--<a href="/Awesome-Graphics-Papers/papers/EG/sph_tutorial/" class="article-date">
+  <time datetime="2023-02-18T00:00:00.000Z" itemprop="datePublished">2023-02-18</time>
+</a>-->
+      <!--
+-->
+      <!--
+      
+      -->
+    </div>
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+          <blockquote>
+            <p>论文标题：Smoothed Particle Hydrodynamics Techniques for the Physics Based Simulation of Fluids and Solids</p>
+            <p>论文来源：EG 2019
+            </p>
+            <p>论文作者：Dan Koschier, Jan Bender, Barbara Solenthaler, Matthias Teschner</p>
+            
+            <p>论文标签：<a href="/Awesome-Graphics-Papers/hierarchies.html#Particle-based Method">Particle-based Method</a></p>
+            <p><a target="_blank" rel="noopener" href='https://interactivecomputergraphics.github.io/SPH-Tutorial/'>论文 / 项目链接</a></p>
+    
+          </blockquote>
+          <p>基本信息：</p>
+<ul>
+<li>简介：<br>(第一部分) SPH是一种在图形学中被广泛使用的基于粒子表示的仿真方法，能够高效地仿真多种属性的材料，如流体、高粘度材料、弹性体等，并且今年来的研究使得SPH能够鲁棒地处理多种材料之间的交互。在Seminar的第一部分，我们介绍了SPH的粒子采样近似连续函数和微分算子的基础概念，并介绍了流体仿真的一般求解流程（算子分裂operator splitting），以及流体不可压缩性的显式（SESPH）&#x2F;隐式（PCISPH，IISPH，DFSPH）求解方法。<br>(第二部分) SPH的固液边界本质上就是偏微分方程的边界条件，其本质困难在于物理场在固体边界附近还没有合适的表达。其中，密度场的表达是依赖于固体的表达的：若固体是基于粒子离散，则常用方法为单层不均匀采样，但是会有表面崎岖的问题；若固体是基于网格离散，则一般边界处采用连续碰撞检测结合碰撞冲量的方式解决穿透，但是会带来效率降低的问题；若固体是隐式表达，例如如今的SOTA方法volume map，这就能比较好地解决上述问题。此外，压强梯度场的表达主要依托于固体区域上压强场的延拓，分为镜像法和外插法。镜像法即算某液体粒子处压强梯度时，直接用该液体粒子处的压强代替固体伪粒子处压强，外插法即用SPH&#x2F;MLS等方式通过所有邻居液体粒子插值出每个空间位置处的合适压强。<br> （第三部分）介绍了SPH流体模拟中引入粘性、涡量和表面张力的主要方法。粘性力主要描述了流体动能的耗散，主要有显式和隐式求解两类方法。借鉴了有限差分的显式方法，能够保持守恒量，并有较高的计算效率，是粘性力计算的主流方法。在涡量和表面张力的研究上，主要可以从宏观或微观上入手。引入涡量有助于降低SPH格式的数值耗散现象，能够更好保持流体的漩涡运动。表面张力描述了液体分子之间的相互吸引力，有助于更真实的流体表面的形成。</li>
+<li>相关材料：<ul>
+<li>网站：<a target="_blank" rel="noopener" href="https://interactivecomputergraphics.github.io/SPH-Tutorial">https://interactivecomputergraphics.github.io/SPH-Tutorial</a></li>
+<li>讨论班: 2023-02-18</li>
+</ul>
+</li>
+</ul>
+
+        
+      
+    </div>
+	
+    <!--
+	
+    -->
+    <!--
+    
+    -->
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="paper-reading-papers/SIGGRAPH-Asia/2022/Differentiable Point-Based Radiance Fields for Efficient View Synthesis" class="article article-type-paper-reading" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <myh11 itemprop="name">
+      
+        <a class="article-title-index" href="/Awesome-Graphics-Papers/papers/SIGGRAPH-Asia/2022/Differentiable%20Point-Based%20Radiance%20Fields%20for%20Efficient%20View%20Synthesis/"><strong>Differentiable Point-Based Radiance Fields for Efficient View Synthesis</strong></a>
+      
+      <!--<a>
+      <div = post.date  </div>
+      </a>-->
+      <br> <!-- blair add -->
+    </myh11>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <!--<a href="/Awesome-Graphics-Papers/papers/SIGGRAPH-Asia/2022/Differentiable%20Point-Based%20Radiance%20Fields%20for%20Efficient%20View%20Synthesis/" class="article-date">
+  <time datetime="2023-02-18T00:00:00.000Z" itemprop="datePublished">2023-02-18</time>
+</a>-->
+      <!--
+-->
+      <!--
+      
+      -->
+    </div>
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+          <blockquote>
+            <p>论文标题：Differentiable Point-Based Radiance Fields for Efficient View Synthesis</p>
+            <p>论文来源：SIGGRAPH-Asia 2022
+            </p>
+            <p>论文作者：Qiang Zhang , Seung-Hwan Baek , Szymon Rusinkiewicz , Felix Heide</p>
+            
+            <p>论文标签：<a href="/Awesome-Graphics-Papers/hierarchies.html#NeRF">NeRF</a></p>
+            <p><a target="_blank" rel="noopener" href='https://doi.org/10.1145/3550469.3555413'>论文 / 项目链接</a></p>
+    
+          </blockquote>
+          <p>基本信息：</p>
+<ul>
+<li>简介：基于点的神经辐射场。</li>
+<li>相关材料：<ul>
+<li>源码：<a target="_blank" rel="noopener" href="https://github.com/sjtuzq/point-radiance">https://github.com/sjtuzq/point-radiance</a></li>
+<li>视频：无</li>
+<li>讨论班: 2023-2-18</li>
+</ul>
+</li>
+</ul>
+<p>本文提出了基于点云的Radiance Field,通过点云的可微渲染，实现了低存储，高效率的场景重建。</p>
+
+        
+      
+    </div>
+	
+    <!--
+	
+    -->
+    <!--
+    
+    -->
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="paper-reading-papers/SIGGRAPH-Asia/2022/SHRED" class="article article-type-paper-reading" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <myh11 itemprop="name">
+      
+        <a class="article-title-index" href="/Awesome-Graphics-Papers/papers/SIGGRAPH-Asia/2022/SHRED/"><strong>SHRED: 3D Shape Region Decomposition with Learned Local Operations</strong></a>
+      
+      <!--<a>
+      <div = post.date  </div>
+      </a>-->
+      <br> <!-- blair add -->
+    </myh11>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <!--<a href="/Awesome-Graphics-Papers/papers/SIGGRAPH-Asia/2022/SHRED/" class="article-date">
+  <time datetime="2023-02-18T00:00:00.000Z" itemprop="datePublished">2023-02-18</time>
+</a>-->
+      <!--
+-->
+      <!--
+      
+      -->
+    </div>
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+          <blockquote>
+            <p>论文标题：SHRED: 3D Shape Region Decomposition with Learned Local Operations</p>
+            <p>论文来源：SIGGRAPH-Asia 2022
+            </p>
+            <p>论文作者：R. Kenny Jones , Aalia Habib , Daniel Ritchie</p>
+            
+            <p>论文标签：<a href="/Awesome-Graphics-Papers/hierarchies.html#Decomposition">Decomposition</a></p>
+            <p><a target="_blank" rel="noopener" href='https://rkjones4.github.io/pdf/shred.pdf'>论文 / 项目链接</a></p>
+    
+          </blockquote>
+          <p>基本信息：</p>
+<ul>
+<li>简介：细粒度的点云分解算法。</li>
+<li>相关材料：<ul>
+<li>源码：<a target="_blank" rel="noopener" href="https://github.com/rkjones4/SHRED">https://github.com/rkjones4/SHRED</a></li>
+<li>论文主页：<a target="_blank" rel="noopener" href="https://rkjones4.github.io/shred.html">https://rkjones4.github.io/shred.html</a></li>
+<li>讨论班: 2023-02-18</li>
+</ul>
+</li>
+</ul>
+<p>SHRED是一种三维点云区域分解算法。他通过学习局部操作来生成细粒度零件实例的分割，并可以依据下游目标任务调整合并阈值来更改颗粒度。</p>
+
+        
+      
+    </div>
+	
+    <!--
+	
+    -->
+    <!--
+    
+    -->
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="paper-reading-papers/CVPR/2022/RefNeRF" class="article article-type-paper-reading" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <myh11 itemprop="name">
+      
+        <a class="article-title-index" href="/Awesome-Graphics-Papers/papers/CVPR/2022/RefNeRF/"><strong>Ref-NeRF: Structured View-Dependent Appearance for Neural Radiance Fields</strong></a>
+      
+      <!--<a>
+      <div = post.date  </div>
+      </a>-->
+      <br> <!-- blair add -->
+    </myh11>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <!--<a href="/Awesome-Graphics-Papers/papers/CVPR/2022/RefNeRF/" class="article-date">
+  <time datetime="2022-12-18T00:00:00.000Z" itemprop="datePublished">2022-12-18</time>
+</a>-->
+      <!--
+-->
+      <!--
+      
+      -->
+    </div>
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+          <blockquote>
+            <p>论文标题：Ref-NeRF: Structured View-Dependent Appearance for Neural Radiance Fields</p>
+            <p>论文来源：CVPR 2022
+            </p>
+            <p>论文作者：Dor Verbin, Peter Hedman, Ben Mildenhall, Todd Zickler, Jonathan T. Barron, Pratul P. Srinivasan</p>
+            
+            <p>论文标签：<a href="/Awesome-Graphics-Papers/hierarchies.html#NeRF">NeRF</a></p>
+            <p><a target="_blank" rel="noopener" href='https://arxiv.org/abs/2112.03907'>论文 / 项目链接</a></p>
+    
+          </blockquote>
+          <p>基本信息：</p>
+<ul>
+<li>简介：本篇文章对原始的NeRF结构进行改进，改善NeRF处理glossy现象的问题。</li>
+<li>相关材料：<ul>
+<li>源码：<a target="_blank" rel="noopener" href="https://github.com/google-research/multinerf">https://github.com/google-research/multinerf</a></li>
+<li>视频：<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=qrdRH9irAlk&amp;ab_channel=DorVerbin">https://www.youtube.com/watch?v=qrdRH9irAlk&amp;ab_channel=DorVerbin</a></li>
+<li>讨论班: 2022-12-18</li>
+</ul>
+</li>
+</ul>
+<p>NeRF在glossy情况下，由于每点的出射光差异很大，因此使用NeRF直接根据出射方向推断出射光是较为困难的，而在Phong模型、无限远环境光的条件下，每点的入射光是一致的。作者将反射方向、roughness、法线方向等显式地作为网络的输入，简化了模型推理的难度；此外，加入了对normal的惩罚，使得density场更加准确。在合成场景下表现很好，但是现实场景下由于不满足无穷远环境光的假设，改善效果不是很好。</p>
+
+        
+      
+    </div>
+	
+    <!--
+	
+    -->
+    <!--
+    
+    -->
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="paper-reading-papers/PACMCGIT/2022/data-driven-prt" class="article article-type-paper-reading" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <myh11 itemprop="name">
+      
+        <a class="article-title-index" href="/Awesome-Graphics-Papers/papers/PACMCGIT/2022/data-driven-prt/"><strong>A Data-Driven Paradigm for Precomputed Radiance Transfer</strong></a>
+      
+      <!--<a>
+      <div = post.date  </div>
+      </a>-->
+      <br> <!-- blair add -->
+    </myh11>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <!--<a href="/Awesome-Graphics-Papers/papers/PACMCGIT/2022/data-driven-prt/" class="article-date">
+  <time datetime="2022-12-18T00:00:00.000Z" itemprop="datePublished">2022-12-18</time>
+</a>-->
+      <!--
+-->
+      <!--
+      
+      -->
+    </div>
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+          <blockquote>
+            <p>论文标题：A Data-Driven Paradigm for Precomputed Radiance Transfer</p>
+            <p>论文来源：PACMCGIT 2022
+            </p>
+            <p>论文作者：Laurent Belcour, Thomas Deliot, Wilhem Barbier, Cyril Soler</p>
+            
+            <p>论文标签：<a href="/Awesome-Graphics-Papers/hierarchies.html#Global Illumination">Global Illumination</a></p>
+            <p><a target="_blank" rel="noopener" href='https://arxiv.org/abs/2206.13112'>论文 / 项目链接</a></p>
+    
+          </blockquote>
+          <p>基本信息：</p>
+<ul>
+<li>简介：传统的 PRT 是将漫反射材质的出射 irradiance 分解成为不同的、以 SH 基函数定义的光照为基础的响应的线性组合；本篇文章将漫反射材质的出射 irradiance 分解成不同 light configuration 下出射光响应的线性组合，并且用矩阵降维的方法压缩存储。</li>
+<li>相关材料：<ul>
+<li>源码：有个 Notebook，<a target="_blank" rel="noopener" href="https://belcour.github.io/blog/supp/2022-data-driven-prt/index.html">链接</a><ul>
+<li>看这个 URL，感觉他之后会写博客介绍？但是 <a target="_blank" rel="noopener" href="https://belcour.github.io/blog">https://belcour.github.io/blog</a> 里面目前没看到</li>
+</ul>
+</li>
+<li>视频：<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=k3hzcrjoFbc">YouTube</a><ul>
+<li>(!) 视频比 paper 好懂一些</li>
+</ul>
+</li>
+<li>讨论班: 2022-12-18<ul>
+<li>时间比较紧，看的也不是很明白，没写 ppt</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>自己写的博客：<a target="_blank" rel="noopener" href="https://blog.libreliu.info/paper-reading/data-driven-prt/">https://blog.libreliu.info/paper-reading/data-driven-prt/</a></p>
+<p>另一个可能有用的材料：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/265463655">游戏中的全局光照(四) Lightmap、LightProbe和Irradiance Volume - 知乎专栏</a></p>
+
+        
+      
+    </div>
+	
+    <!--
+	
+    -->
+    <!--
+    
+    -->
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="paper-reading-papers/SIGGRAPH/2019/puppetmaster_SIG2019" class="article article-type-paper-reading" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <myh11 itemprop="name">
+      
+        <a class="article-title-index" href="/Awesome-Graphics-Papers/papers/SIGGRAPH/2019/puppetmaster_SIG2019/"><strong>PuppetMaster: robotic animation of marionettes</strong></a>
+      
+      <!--<a>
+      <div = post.date  </div>
+      </a>-->
+      <br> <!-- blair add -->
+    </myh11>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <!--<a href="/Awesome-Graphics-Papers/papers/SIGGRAPH/2019/puppetmaster_SIG2019/" class="article-date">
+  <time datetime="2022-12-18T00:00:00.000Z" itemprop="datePublished">2022-12-18</time>
+</a>-->
+      <!--
+-->
+      <!--
+      
+      -->
+    </div>
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+          <blockquote>
+            <p>论文标题：PuppetMaster: robotic animation of marionettes</p>
+            <p>论文来源：SIGGRAPH 2019
+            </p>
+            <p>论文作者：Simon Zimmermann, Roi Poranne, James M. Bern, Stelian Coros</p>
+            
+            <p>论文标签：<a href="/Awesome-Graphics-Papers/hierarchies.html#Sensitivity analysis">Sensitivity analysis</a>, <a href="/Awesome-Graphics-Papers/hierarchies.html#Robotics">Robotics</a></p>
+            <p><a target="_blank" rel="noopener" href='https://dl.acm.org/doi/10.1145/3306346.3323003'>论文 / 项目链接</a></p>
+    
+          </blockquote>
+          <p>基本信息：</p>
+<ul>
+<li>简介：本篇文章介绍了一种基于物理动力学方程的机器人操作物体的逆向轨迹优化模型，以让机器人可以动态操作物体并达到我们预设的效果。基于这个模型，研究人员实现了机器人表演木偶戏（一种高胡克系数的质点-弹簧模型），并且可以向其他种类物体（如弹性体、布料等）扩展。</li>
+<li>相关材料：<ul>
+<li>源码：无</li>
+<li>Demo视频：<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=F3pMTdYmJgw">https://www.youtube.com/watch?v=F3pMTdYmJgw</a></li>
+<li>Presentation视频：无</li>
+<li>讨论班: 2022-12-28</li>
+</ul>
+</li>
+</ul>
+
+        
+      
+    </div>
+	
+    <!--
+	
+    -->
+    <!--
+    
+    -->
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="paper-reading-papers/SIGGRAPH/2021/vectorization" class="article article-type-paper-reading" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <myh11 itemprop="name">
+      
+        <a class="article-title-index" href="/Awesome-Graphics-Papers/papers/SIGGRAPH/2021/vectorization/"><strong>Vectorization for Fast, Analytic, and Differentiable Visibility</strong></a>
+      
+      <!--<a>
+      <div = post.date  </div>
+      </a>-->
+      <br> <!-- blair add -->
+    </myh11>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <!--<a href="/Awesome-Graphics-Papers/papers/SIGGRAPH/2021/vectorization/" class="article-date">
+  <time datetime="2022-12-18T00:00:00.000Z" itemprop="datePublished">2022-12-18</time>
+</a>-->
+      <!--
+-->
+      <!--
+      
+      -->
+    </div>
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+          <blockquote>
+            <p>论文标题：Vectorization for Fast, Analytic, and Differentiable Visibility</p>
+            <p>论文来源：SIGGRAPH 2021
+            </p>
+            <p>论文作者：Yang Zhou, Lifan Wu, Ravi Ramamoorthi, Ling-Qi Yan</p>
+            
+            <p>论文标签：<a href="/Awesome-Graphics-Papers/hierarchies.html#Ray tracing">Ray tracing</a></p>
+            <p><a target="_blank" rel="noopener" href='https://sites.cs.ucsb.edu/~lingqi/publications/paper_vectorization.pdf'>论文 / 项目链接</a></p>
+    
+          </blockquote>
+          <p>基本信息：</p>
+<ul>
+<li>简介：本篇文章介绍了一种基于计算解析可见性函数的渲染方法，能够解决点采样带来的走样和噪点问题，但是只解决了直接光照及其可微问题</li>
+<li>相关材料：<ul>
+<li>源码：无</li>
+<li>Demo视频：<a target="_blank" rel="noopener" href="https://sites.cs.ucsb.edu/~lingqi/publications/video_vectorization.mp4">https://sites.cs.ucsb.edu/~lingqi/publications/video_vectorization.mp4</a></li>
+<li>Presentation视频：<a target="_blank" rel="noopener" href="https://sites.cs.ucsb.edu/~lingqi/publications/presentation_vectorization.mp4">https://sites.cs.ucsb.edu/~lingqi/publications/presentation_vectorization.mp4</a></li>
+<li>讨论班: 2022-12-28</li>
+</ul>
+</li>
+</ul>
+
+        
+      
+    </div>
+	
+    <!--
+	
+    -->
+    <!--
+    
+    -->
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="paper-reading-papers/SIGGRAPH-Asia/2022/caustics_pathcut" class="article article-type-paper-reading" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <myh11 itemprop="name">
+      
+        <a class="article-title-index" href="/Awesome-Graphics-Papers/papers/SIGGRAPH-Asia/2022/caustics_pathcut/"><strong>Unbiased Caustics Rendering Guided by Representative Specular Paths</strong></a>
+      
+      <!--<a>
+      <div = post.date  </div>
+      </a>-->
+      <br> <!-- blair add -->
+    </myh11>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <!--<a href="/Awesome-Graphics-Papers/papers/SIGGRAPH-Asia/2022/caustics_pathcut/" class="article-date">
+  <time datetime="2022-12-04T00:00:00.000Z" itemprop="datePublished">2022-12-04</time>
+</a>-->
+      <!--
+-->
+      <!--
+      
+      -->
+    </div>
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+          <blockquote>
+            <p>论文标题：Unbiased Caustics Rendering Guided by Representative Specular Paths</p>
+            <p>论文来源：SIGGRAPH-Asia 2022
+            </p>
+            <p>论文作者：He Li, Beibei Wang, Changhe Tu, Kun Xu, Nicolas Holzschuch, Ling-Qi Yan</p>
+            
+            <p>论文标签：<a href="/Awesome-Graphics-Papers/hierarchies.html#Ray tracing">Ray tracing</a>, <a href="/Awesome-Graphics-Papers/hierarchies.html#Acceleration structure">Acceleration structure</a></p>
+            <p><a target="_blank" rel="noopener" href='https://wangningbei.github.io/2022/PathcutGuiding_files/paper_pathcut_guiding.pdf'>论文 / 项目链接</a></p>
+    
+          </blockquote>
+          <p>基本信息：</p>
+<ul>
+<li>简介：本篇文章介绍了一种利用Pathcut方法生成的Pure Specular Path对每次bounce采样方向进行引导，进而加速渲染caustic现象的方法。</li>
+<li>相关材料：<ul>
+<li>源码：<a target="_blank" rel="noopener" href="https://github.com/Lihns/caustics-pathcut">https://github.com/Lihns/caustics-pathcut</a></li>
+<li>视频：无</li>
+<li>讨论班: 2022-12-04</li>
+</ul>
+</li>
+</ul>
+<p>首先利用Pathcut方法生成的Pure Specular Path，然后使用这个代表性路径对bounce处的入射光分布进行估计，根据估计的入射光分布可以引导bounce处的采样</p>
+
+        
+      
+    </div>
+	
+    <!--
+	
+    -->
+    <!--
+    
+    -->
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="paper-reading-papers/SIGGRAPH-Asia/2022/icarus" class="article article-type-paper-reading" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <myh11 itemprop="name">
+      
+        <a class="article-title-index" href="/Awesome-Graphics-Papers/papers/SIGGRAPH-Asia/2022/icarus/"><strong>ICARUS: A Specialized Architecture for Neural Radiance Fields Rendering</strong></a>
+      
+      <!--<a>
+      <div = post.date  </div>
+      </a>-->
+      <br> <!-- blair add -->
+    </myh11>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <!--<a href="/Awesome-Graphics-Papers/papers/SIGGRAPH-Asia/2022/icarus/" class="article-date">
+  <time datetime="2022-10-16T00:00:00.000Z" itemprop="datePublished">2022-10-16</time>
+</a>-->
+      <!--
+-->
+      <!--
+      
+      -->
+    </div>
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+          <blockquote>
+            <p>论文标题：ICARUS: A Specialized Architecture for Neural Radiance Fields Rendering</p>
+            <p>论文来源：SIGGRAPH-Asia 2022
+            </p>
+            <p>论文作者：Chaolin Rao, Huangjie Yu, Haochuan Wan, Jindong Zhou, Yueyang Zheng, Yu Ma, Anpei Chen, Minye Wu, Binzhe Yuan, Pingqiang Zhou, Xin Lou, Jingyi Yu</p>
+            
+            <p>论文标签：<a href="/Awesome-Graphics-Papers/hierarchies.html#NeRF">NeRF</a></p>
+            <p><a target="_blank" rel="noopener" href='https://arxiv.org/abs/2203.01414'>论文 / 项目链接</a></p>
+    
+          </blockquote>
+          <p>基本信息：</p>
+<ul>
+<li>简介：本篇文章介绍了 NeRF 硬件加速器的实现。</li>
+<li>相关材料：<ul>
+<li>源码：无</li>
+<li>视频：无</li>
+<li>讨论班: 2022-10-16</li>
+</ul>
+</li>
+</ul>
+<p>自己写的博客：<a target="_blank" rel="noopener" href="https://blog.libreliu.info/paper-reading/icarus-nerf/">https://blog.libreliu.info/paper-reading/icarus-nerf/</a></p>
+
+        
+      
+    </div>
+	
+    <!--
+	
+    -->
+    <!--
+    
+    -->
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="paper-reading-papers/SIGGRAPH-Asia/2021/pbflr" class="article article-type-paper-reading" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <myh11 itemprop="name">
+      
+        <a class="article-title-index" href="/Awesome-Graphics-Papers/papers/SIGGRAPH-Asia/2021/pbflr/"><strong>Physically-based Feature Line Rendering</strong></a>
+      
+      <!--<a>
+      <div = post.date  </div>
+      </a>-->
+      <br> <!-- blair add -->
+    </myh11>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <!--<a href="/Awesome-Graphics-Papers/papers/SIGGRAPH-Asia/2021/pbflr/" class="article-date">
+  <time datetime="2022-08-28T00:00:00.000Z" itemprop="datePublished">2022-08-28</time>
+</a>-->
+      <!--
+-->
+      <!--
+      
+      -->
+    </div>
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+          <blockquote>
+            <p>论文标题：Physically-based Feature Line Rendering</p>
+            <p>论文来源：SIGGRAPH-Asia 2021
+            </p>
+            <p>论文作者：Rex West</p>
+            
+            <p>论文标签：<a href="/Awesome-Graphics-Papers/hierarchies.html#Ray tracing">Ray tracing</a></p>
+            <p><a target="_blank" rel="noopener" href='http://lines.rexwe.st/'>论文 / 项目链接</a></p>
+    
+          </blockquote>
+          <p>基本信息：</p>
+<ul>
+<li>简介：本篇文章介绍了基于 Path Tracing 的特征线渲染框架的实现。</li>
+<li>相关材料：<ul>
+<li>源码：无</li>
+<li>视频：<a target="_blank" rel="noopener" href="https://youtu.be/2q6F6gF1XYo">SIGGRAPH Asia 2021 Presentation @ YouTube</a></li>
+<li>讨论班: 2022-08-28</li>
+</ul>
+</li>
+</ul>
+<p>自己写的博客：<a target="_blank" rel="noopener" href="https://blog.libreliu.info/paper-reading/pbr-feature-line/">https://blog.libreliu.info/paper-reading/pbr-feature-line/</a></p>
+
+        
+      
+    </div>
+	
+    <!--
+	
+    -->
+    <!--
+    
+    -->
+  </div>
+  
+</article>
+
+
+
+    
+      <nav id="page-nav">
+        <a class="extend prev" rel="prev" href="/Awesome-Graphics-Papers/page/2/">&amp;laquo; 上一页</a><a class="page-number" href="/Awesome-Graphics-Papers/">1</a><a class="page-number" href="/Awesome-Graphics-Papers/page/2/">2</a><span class="page-number current">3</span>
+      </nav>
+    
+
+</section>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2023 GCL-Seminar&nbsp;
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, theme by <a target="_blank" rel="noopener" href="http://github.com/52binge/hexo-theme-blairos">blairos</a>
+    </div>
+  </div>
+</footer>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+      displayMath: [ ['$$','$$']],
+      processEscapes: true
+    }
+  });
+</script>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+      displayMath: [ ['$$','$$']],
+      processEscapes: true,
+    },
+    options: {
+    renderActions: {
+      findScript: [10, function (doc) {
+        for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+          const display = !!node.type.match(/; *mode=display/);
+          const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+          const text = document.createTextNode('');
+          node.parentNode.replaceChild(text, node);
+          math.start = {node: text, delim: '', n: 0};
+          math.end = {node: text, delim: '', n: 0};
+          doc.math.push(math);
+        }
+      }, '']
+    }
+  }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" src="/js/mathjax/tex-chtml.js">
+</script>
+
+    
+
+<script src="/Awesome-Graphics-Papers/Awesome-Graphics-Papers/js/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/Awesome-Graphics-Papers/fancybox/jquery.fancybox.css">
+
+  
+<script src="/Awesome-Graphics-Papers/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/Awesome-Graphics-Papers/js/script.js"></script>
+
+
+  </div>
+</body>
+</html>

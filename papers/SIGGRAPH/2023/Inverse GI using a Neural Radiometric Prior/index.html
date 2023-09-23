@@ -5,12 +5,12 @@
   
   <title>Awesome Graphics Papers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基本信息：  简介：本文提出了一种新的金字塔形低通滤波器架构，结合历史帧数据对光线追踪的结果进行降噪。 相关材料： 源码：balintio&#x2F;nppd @ GitHub “Coming soon” as of Jun. 21st, 2023   幻灯片：N&#x2F;A 视频：balint 的个人网站 讨论班: 2023-06-11">
+  <meta name="description" content="基本信息：  简介：基于神经辐射度先验的逆向全局光照。 相关材料： 源码：无 视频：无 讨论班: 2023-06-11    本文提出了一种逆向渲染方法，该方法使用神经网络表示辐射度，并通过自动微分（AD）计算场景参数的梯度，而不是构建并微分路径积分。与需要跟踪完整路径样本的先前工作相比（例如路径重放反向传播，Path Replay Backpropagation），可以以相当（有时更好）的质量恢">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Awesome Graphics Papers">
-<meta property="og:url" content="https://gcl-seminar.github.io/Awesome-Graphics-Papers/papers/SIGGRAPH/2023/neural-pyramid-mc-denoising/index.html">
+<meta property="og:url" content="https://gcl-seminar.github.io/Awesome-Graphics-Papers/papers/SIGGRAPH/2023/Inverse%20GI%20using%20a%20Neural%20Radiometric%20Prior/index.html">
 <meta property="og:site_name" content="Awesome Graphics Papers">
-<meta property="og:description" content="基本信息：  简介：本文提出了一种新的金字塔形低通滤波器架构，结合历史帧数据对光线追踪的结果进行降噪。 相关材料： 源码：balintio&#x2F;nppd @ GitHub “Coming soon” as of Jun. 21st, 2023   幻灯片：N&#x2F;A 视频：balint 的个人网站 讨论班: 2023-06-11">
+<meta property="og:description" content="基本信息：  简介：基于神经辐射度先验的逆向全局光照。 相关材料： 源码：无 视频：无 讨论班: 2023-06-11    本文提出了一种逆向渲染方法，该方法使用神经网络表示辐射度，并通过自动微分（AD）计算场景参数的梯度，而不是构建并微分路径积分。与需要跟踪完整路径样本的先前工作相比（例如路径重放反向传播，Path Replay Backpropagation），可以以相当（有时更好）的质量恢">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-11T00:00:00.000Z">
 <meta property="article:modified_time" content="2023-06-11T00:00:00.000Z">
@@ -59,14 +59,14 @@
 </header>
 
     <br>
-    <section id="main" class="outer"><article id="paper-reading-papers/SIGGRAPH/2023/neural-pyramid-mc-denoising" class="article article-type-paper-reading" itemscope itemprop="blogPost">
+    <section id="main" class="outer"><article id="paper-reading-papers/SIGGRAPH/2023/Inverse GI using a Neural Radiometric Prior" class="article article-type-paper-reading" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
       <header class="article-header">
         
   <h1 itemprop="name">
-    <a href="/Awesome-Graphics-Papers/papers/SIGGRAPH/2023/neural-pyramid-mc-denoising/" class="article-title" target="_blank" itemprop="url">Neural Partitioning Pyramids for Denoising Monte Carlo Renderings</a>
+    <a href="/Awesome-Graphics-Papers/papers/SIGGRAPH/2023/Inverse%20GI%20using%20a%20Neural%20Radiometric%20Prior/" class="article-title" target="_blank" itemprop="url">Inverse Global Illumination using a Neural Radiometric Prior</a>
   </h1>
 
 
@@ -75,7 +75,7 @@
       </header>
     
     <div class="article-meta">
-      <!--<a href="/Awesome-Graphics-Papers/papers/SIGGRAPH/2023/neural-pyramid-mc-denoising/" class="article-date">
+      <!--<a href="/Awesome-Graphics-Papers/papers/SIGGRAPH/2023/Inverse%20GI%20using%20a%20Neural%20Radiometric%20Prior/" class="article-date">
   <time datetime="2023-06-11T00:00:00.000Z" itemprop="datePublished">2023-06-11</time>
 </a>-->
       <!-- 
@@ -87,13 +87,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-          <p>论文标题：Neural Partitioning Pyramids for Denoising Monte Carlo Renderings</p>
+          <p>论文标题：Inverse Global Illumination using a Neural Radiometric Prior</p>
           <p>论文来源：SIGGRAPH 2023
           </p>
-          <p>论文作者：Martin Bálint, Krzysztof Wolski, Karol Myszkowski, Hans-Peter Seidel, Rafał Mantiuk</p>
+          <p>论文作者：Saeed Hadadan, Geng Lin, Jan Novák, Fabrice Rousselle, Matthias Zwicker</p>
           
-          <p>论文标签：<a href="/Awesome-Graphics-Papers/hierarchies.html#Denoising">Denoising</a></p>
-          <p><a target="_blank" rel="noopener" href='https://balint.io/nppd/'>论文 / 项目链接</a></p>
+          <p>论文标签：<a href="/Awesome-Graphics-Papers/hierarchies.html#Neural Radiosity">Neural Radiosity</a></p>
+          <p><a target="_blank" rel="noopener" href='https://research.nvidia.com/labs/rtr/inverse_global_illumination/'>论文 / 项目链接</a></p>
 
         </blockquote>
       
@@ -101,18 +101,15 @@
       
         <p>基本信息：</p>
 <ul>
-<li>简介：本文提出了一种新的金字塔形低通滤波器架构，结合历史帧数据对光线追踪的结果进行降噪。</li>
+<li>简介：基于神经辐射度先验的逆向全局光照。</li>
 <li>相关材料：<ul>
-<li>源码：<a target="_blank" rel="noopener" href="https://github.com/balintio/nppd">balintio&#x2F;nppd @ GitHub</a><ul>
-<li>“Coming soon” as of Jun. 21st, 2023</li>
-</ul>
-</li>
-<li>幻灯片：N&#x2F;A</li>
-<li>视频：<a target="_blank" rel="noopener" href="https://balint.io/nppd/nppd_video.mp4">balint 的个人网站</a></li>
+<li>源码：无</li>
+<li>视频：无</li>
 <li>讨论班: 2023-06-11</li>
 </ul>
 </li>
 </ul>
+<p>本文提出了一种逆向渲染方法，该方法使用神经网络表示辐射度，并通过自动微分（AD）计算场景参数的梯度，而不是构建并微分路径积分。与需要跟踪完整路径样本的先前工作相比（例如路径重放反向传播，Path Replay Backpropagation），可以以相当（有时更好）的质量恢复场景参数且具有更快的运行速度。</p>
 
       
      <!-- by blair add this if sentence at 20160725 -->
@@ -171,7 +168,7 @@
     
 <nav id="article-nav">
   
-    <a href="/Awesome-Graphics-Papers/papers/SIGGRAPH/2023/Inverse%20GI%20using%20a%20Neural%20Radiometric%20Prior/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/Awesome-Graphics-Papers/papers/SIGGRAPH/2023/NPM%20for%20Path%20Guiding/" id="article-nav-newer" class="article-nav-link-wrap">
       <div class="article-nav-title"><span>&lt;</span>&nbsp;
         
           (no title)
@@ -180,7 +177,7 @@
     </a>
   
   
-    <a href="/Awesome-Graphics-Papers/papers/Science/2022/irregular_growth/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/Awesome-Graphics-Papers/papers/SIGGRAPH/2023/neural-pyramid-mc-denoising/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">&nbsp;<span>&gt;</span></div>
     </a>
   

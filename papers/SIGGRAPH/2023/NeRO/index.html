@@ -5,15 +5,15 @@
   
   <title>Awesome Graphics Papers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基本信息：  简介：本文提出了一种新的金字塔形低通滤波器架构，结合历史帧数据对光线追踪的结果进行降噪。 相关材料： 源码：balintio&#x2F;nppd @ GitHub “Coming soon” as of Jun. 21st, 2023   幻灯片：N&#x2F;A 视频：balint 的个人网站 讨论班: 2023-06-11">
+  <meta name="description" content="基本信息：  简介：多视角镜面反射物体图像的神经几何与BRDF重建。 相关材料： 源码：无 视频：无 讨论班: 2023-09-03    本文提出了一种基于神经渲染的方法NeRO，用于从多视角图像中重建光泽反射（Glossy）物体的几何与BRDF。首先通过应用split-sum近似和积分方向编码来近似直接光和间接光的着色效果，从而准确地重建反射对象的几何形状。然后在物体几何形状固定的情况下，使用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Awesome Graphics Papers">
-<meta property="og:url" content="https://gcl-seminar.github.io/Awesome-Graphics-Papers/papers/SIGGRAPH/2023/neural-pyramid-mc-denoising/index.html">
+<meta property="og:url" content="https://gcl-seminar.github.io/Awesome-Graphics-Papers/papers/SIGGRAPH/2023/NeRO/index.html">
 <meta property="og:site_name" content="Awesome Graphics Papers">
-<meta property="og:description" content="基本信息：  简介：本文提出了一种新的金字塔形低通滤波器架构，结合历史帧数据对光线追踪的结果进行降噪。 相关材料： 源码：balintio&#x2F;nppd @ GitHub “Coming soon” as of Jun. 21st, 2023   幻灯片：N&#x2F;A 视频：balint 的个人网站 讨论班: 2023-06-11">
+<meta property="og:description" content="基本信息：  简介：多视角镜面反射物体图像的神经几何与BRDF重建。 相关材料： 源码：无 视频：无 讨论班: 2023-09-03    本文提出了一种基于神经渲染的方法NeRO，用于从多视角图像中重建光泽反射（Glossy）物体的几何与BRDF。首先通过应用split-sum近似和积分方向编码来近似直接光和间接光的着色效果，从而准确地重建反射对象的几何形状。然后在物体几何形状固定的情况下，使用">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-06-11T00:00:00.000Z">
-<meta property="article:modified_time" content="2023-06-11T00:00:00.000Z">
+<meta property="article:published_time" content="2023-09-03T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-09-03T00:00:00.000Z">
 <meta property="article:author" content="GCL-Seminar">
 <meta name="twitter:card" content="summary">
   
@@ -59,14 +59,14 @@
 </header>
 
     <br>
-    <section id="main" class="outer"><article id="paper-reading-papers/SIGGRAPH/2023/neural-pyramid-mc-denoising" class="article article-type-paper-reading" itemscope itemprop="blogPost">
+    <section id="main" class="outer"><article id="paper-reading-papers/SIGGRAPH/2023/NeRO" class="article article-type-paper-reading" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
       <header class="article-header">
         
   <h1 itemprop="name">
-    <a href="/Awesome-Graphics-Papers/papers/SIGGRAPH/2023/neural-pyramid-mc-denoising/" class="article-title" target="_blank" itemprop="url">Neural Partitioning Pyramids for Denoising Monte Carlo Renderings</a>
+    <a href="/Awesome-Graphics-Papers/papers/SIGGRAPH/2023/NeRO/" class="article-title" target="_blank" itemprop="url">NeRO: Neural Geometry and BRDF Reconstruction of Reflective Objects from Multiview Images</a>
   </h1>
 
 
@@ -75,8 +75,8 @@
       </header>
     
     <div class="article-meta">
-      <!--<a href="/Awesome-Graphics-Papers/papers/SIGGRAPH/2023/neural-pyramid-mc-denoising/" class="article-date">
-  <time datetime="2023-06-11T00:00:00.000Z" itemprop="datePublished">2023-06-11</time>
+      <!--<a href="/Awesome-Graphics-Papers/papers/SIGGRAPH/2023/NeRO/" class="article-date">
+  <time datetime="2023-09-03T00:00:00.000Z" itemprop="datePublished">2023-09-03</time>
 </a>-->
       <!-- 
 --><!-- by blair 160724 -->
@@ -87,13 +87,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-          <p>论文标题：Neural Partitioning Pyramids for Denoising Monte Carlo Renderings</p>
+          <p>论文标题：NeRO: Neural Geometry and BRDF Reconstruction of Reflective Objects from Multiview Images</p>
           <p>论文来源：SIGGRAPH 2023
           </p>
-          <p>论文作者：Martin Bálint, Krzysztof Wolski, Karol Myszkowski, Hans-Peter Seidel, Rafał Mantiuk</p>
+          <p>论文作者：YUAN LIU, PENG WANG, CHENG LIN, XIAOXIAO LONG, JIEPENG WANG, LINGJIE LIU, TAKU KOMURA, WENPING WANG</p>
           
-          <p>论文标签：<a href="/Awesome-Graphics-Papers/hierarchies.html#Denoising">Denoising</a></p>
-          <p><a target="_blank" rel="noopener" href='https://balint.io/nppd/'>论文 / 项目链接</a></p>
+          <p>论文标签：<a href="/Awesome-Graphics-Papers/hierarchies.html#NeRF">NeRF</a></p>
+          <p><a target="_blank" rel="noopener" href='https://liuyuan-pal.github.io/NeRO/'>论文 / 项目链接</a></p>
 
         </blockquote>
       
@@ -101,18 +101,15 @@
       
         <p>基本信息：</p>
 <ul>
-<li>简介：本文提出了一种新的金字塔形低通滤波器架构，结合历史帧数据对光线追踪的结果进行降噪。</li>
+<li>简介：多视角镜面反射物体图像的神经几何与BRDF重建。</li>
 <li>相关材料：<ul>
-<li>源码：<a target="_blank" rel="noopener" href="https://github.com/balintio/nppd">balintio&#x2F;nppd @ GitHub</a><ul>
-<li>“Coming soon” as of Jun. 21st, 2023</li>
-</ul>
-</li>
-<li>幻灯片：N&#x2F;A</li>
-<li>视频：<a target="_blank" rel="noopener" href="https://balint.io/nppd/nppd_video.mp4">balint 的个人网站</a></li>
-<li>讨论班: 2023-06-11</li>
+<li>源码：无</li>
+<li>视频：无</li>
+<li>讨论班: 2023-09-03</li>
 </ul>
 </li>
 </ul>
+<p>本文提出了一种基于神经渲染的方法NeRO，用于从多视角图像中重建光泽反射（Glossy）物体的几何与BRDF。首先通过应用split-sum近似和积分方向编码来近似直接光和间接光的着色效果，从而准确地重建反射对象的几何形状。然后在物体几何形状固定的情况下，使用更精确的采样来恢复环境光和物体的BRDF。测试数据集上，几何的重建效果好于COLMAP、NeuS等方法，BRDF的重建效果好于NDR等方法。</p>
 
       
      <!-- by blair add this if sentence at 20160725 -->
@@ -171,7 +168,7 @@
     
 <nav id="article-nav">
   
-    <a href="/Awesome-Graphics-Papers/papers/SIGGRAPH/2023/Inverse%20GI%20using%20a%20Neural%20Radiometric%20Prior/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/Awesome-Graphics-Papers/papers/SIGGRAPH/2023/Differentiable%20Stripe%20Patterns%20for%20Inverse%20Design%20of%20Structured%20Surfaces/" id="article-nav-newer" class="article-nav-link-wrap">
       <div class="article-nav-title"><span>&lt;</span>&nbsp;
         
           (no title)
@@ -180,7 +177,7 @@
     </a>
   
   
-    <a href="/Awesome-Graphics-Papers/papers/Science/2022/irregular_growth/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/Awesome-Graphics-Papers/papers/SIGGRAPH/2023/Second-order%20stencil%20descent/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">&nbsp;<span>&gt;</span></div>
     </a>
   
